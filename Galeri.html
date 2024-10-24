@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo Gallery</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+      }
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(100px, 1fr));
+        gap: 10px;
+        padding: 10px;
+      }
+      .gallery img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+      }
+      .gallery img:hover {
+        transform: scale(1.05);
+      }
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        overflow: auto;
+      }
+      .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 500px;
+        max-height: 75%;
+        animation: zoom 0.6s;
+      }
+      @keyframes zoom {
+        from {
+          transform: scale(0.1);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
+      .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+      .close:hover,
+      .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="profile.html">profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="kontak.html">kontak</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Galeri.html">Galeri</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="daftar.html ">daftar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="form.html">Form</a>
+              </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <script src="bootstrap/bootstrap.min.js"></script>
+     <!--footer-->
+     <footer>
+        <p>&copy;2024 by Dwi Putri Naila Zulfa. All rights reserved.</p>
+      </footer>
+  </body>
+    <h1 style="text-align: center">Gallery Saya</h1>
+    <div class="gallery">
+      <img
+        src="img-puput/img 12.jpg"
+        alt="img 1"
+        onclick="openModal(this.src)"
+      />
+      <img
+        src="img-puput/img.1.jpg"
+        alt="Image 2"
+        onclick="openModal(this.src)"
+      />
+      <img
+        src="img-puput/img.10.jpg"
+        alt="Image 3"
+        onclick="openModal(this.src)"
+      />
+      <img
+        src="img-puput/img.11.jpg"
+        alt="Image 4"
+        onclick="openModal(this.src)"
+      />
+      <img
+        src="img-puput/img.2.jpg"
+        alt="Image 5"
+        onclick="openModal(this.src)"
+      />
+      <img
+        src="img-puput/img.3.jpg"
+        alt="Image 6"
+        onclick="openModal(this.src)"
+      />
+      <img
+        src="img-puput/img.4.jpg"
+        alt="Image 7"
+        onclick="openModal(this.src)"
+      />
+      <img
+        src="img-puput/img.5.jpg"
+        alt="Image 8"
+        onclick="openModal(this.src)"
+      />
+      <img
+        src="img-puput/img.8.jpg"
+        alt="Image 9"
+        onclick="openModal(this.src)"
+      />
+      <img
+        src="img-puput/img.6.jpg"
+        alt="Image 9"
+        onclick="openModal(this.src)"
+      />
+      <img
+        src="img-puput/img.7.jpg"
+        alt="Image 9"
+        onclick="openModal(this.src)"
+      />
+      <img
+        src="img-puput/img.9.jpg"
+        alt="Image 9"
+        onclick="openModal(this.src)"
+      />
+    </div>
+
+    <div id="myModal" class="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img class="modal-content" id="modalImg" />
+    </div>
+
+    <script>
+      function openModal(src) {
+        var modal = document.getElementById("myModal");
+        var modalImg = document.getElementById("modalImg");
+        modal.style.display = "flex";
+        modalImg.src = src;
+      }
+
+      function closeModal() {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "none";
+      }
+
+      window.onclick = function (event) {
+        var modal = document.getElementById("myModal");
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>

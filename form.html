@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Pendaftaran</title>
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid #000;
+        padding: 8px;
+      }
+      th {
+        background-color: #fbf8fb;
+      }
+      td {
+        background-color: #9ad2e2;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[type="tel"],
+      select {
+        width: 100%;
+        padding: 5px;
+        box-sizing: border-box;
+      }
+      input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="profile.html">profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="kontak.html">kontak</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Galeri.html">Galeri</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="daftar.html ">daftar</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <script src="bootstrap/bootstrap.min.js"></script>
+    <h2 style="text-align: center">Form Pendaftaran</h2>
+    <form action="#" method="POST">
+      <table>
+        <tr>
+          <th>Nama Depan</th>
+          <td><input type="text" name="firstName" required /></td>
+          <th>Nama Belakang</th>
+          <td><input type="text" name="lastName" required /></td>
+        </tr>
+        <tr>
+          <th>Alamat</th>
+          <td colspan="3"><input type="text" name="address" required /></td>
+        </tr>
+        <tr>
+          <th>No HP</th>
+          <td><input type="tel" name="phone" required /></td>
+          <th>E-mail</th>
+          <td><input type="email" name="email" required /></td>
+        </tr>
+        <tr>
+          <th>Agama</th>
+          <td>
+            <select name="religion" required>
+              <option value="">--Silahkan Pilih--</option>
+              <option value="Islam">Islam</option>
+              <option value="Hindu">Hindu</option>
+              <option value="Budha">Budha</option>
+            </select>
+          </td>
+          <th>Jenis Kelamin</th>
+          <td>
+            <select name="gender" required>
+              <option value="">--Silahkan Pilih--</option>
+              <option value="Laki-laki">Laki-laki</option>
+              <option value="Perempuan">Perempuan</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>Pekerjaan</th>
+          <td>
+            <select name="job" required>
+              <option value="">--Silahkan Pilih--</option>
+              <option value="Swasta">Swasta</option>
+              <option value="PNS">PNS</option>
+              <option value="TNI">TNI</option>
+              <option value="Polri">Polri</option>
+              <option value="Dokter">Dokter</option>
+              <option value="Programmer">Programmer</option>
+              <option value="DPR">DPR</option>
+              <option value="Guru">Guru</option>
+              <option value="Dosen">Dosen</option>
+            </select>
+          </td>
+          <th>NIK / No KTP</th>
+          <td><input type="text" name="nik" required /></td>
+        </tr>
+        <tr>
+          <th>Url Facebook</th>
+          <td><input type="text" name="facebook" /></td>
+          <th>Url Instagram</th>
+          <td><input type="text" name="instagram" /></td>
+        </tr>
+        <tr>
+          <th>Nama Ayah</th>
+          <td><input type="text" name="fatherName" /></td>
+          <th>Nama Ibu</th>
+          <td><input type="text" name="motherName" /></td>
+        </tr>
+        <tr>
+          <th>Alamat Ayah</th>
+          <td><input type="text" name="fatherAddress" /></td>
+          <th>Alamat Ibu</th>
+          <td><input type="text" name="motherAddress" /></td>
+        </tr>
+        <tr>
+          <th>Pekerjaan Ayah</th>
+          <td>
+            <select name="fatherJob">
+              <option value="">--Silahkan Pilih--</option>
+              <option value="Swasta">Swasta</option>
+              <option value="PNS">PNS</option>
+              <option value="TNI">TNI</option>
+              <option value="Polri">Polri</option>
+              <option value="Dokter">Dokter</option>
+              <option value="Programmer">Programmer</option>
+              <option value="DPR">DPR</option>
+              <option value="Guru">Guru</option>
+              <option value="Dosen">Dosen</option>
+            </select>
+          </td>
+          <th>Pekerjaan Ibu</th>
+          <td>
+            <select name="motherJob">
+              <option value="">--Silahkan Pilih--</option>
+              <option value="Swasta">Swasta</option>
+              <option value="PNS">PNS</option>
+              <option value="TNI">TNI</option>
+              <option value="Polri">Polri</option>
+              <option value="Dokter">Dokter</option>
+              <option value="Programmer">Programmer</option>
+              <option value="DPR">DPR</option>
+              <option value="Guru">Guru</option>
+              <option value="Dosen">Dosen</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>No HP Ayah</th>
+          <td><input type="tel" name="fatherPhone" /></td>
+          <th>No HP Ibu</th>
+          <td><input type="tel" name="motherPhone" /></td>
+        </tr>
+        <tr>
+          <th>Username</th>
+          <td><input type="text" name="username" required /></td>
+          <th>Password</th>
+          <td><input type="password" name="password" required /></td>
+        </tr>
+        <tr>
+          <th>Re-type Password</th>
+          <td colspan="3">
+            <input type="password" name="repassword" required />
+          </td>
+        </tr>
+      </table>
+      <input type="submit" value="Submit" />
+    </form>
+    <!--footer-->
+    <footer>
+      <p>&copy;2024 by Dwi Putri Naila Zulfa. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
